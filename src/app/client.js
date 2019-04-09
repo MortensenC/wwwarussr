@@ -1,15 +1,16 @@
-import "babel-polyfill";
-import React from "react";
-import { render } from "react-dom";
-import { AppContainer } from "react-hot-loader";
-import { Provider } from "react-redux";
+// Dependencies
+import 'babel-polyfill';
+import React from 'react';
+import { render } from 'react-dom';
+import { AppContainer } from 'react-hot-loader';
 
-import App from "./App";
+// Containers
+import App from './App';
 
-const store = configureStore(window.initialState);
+// DOM
+const rootElement = document.getElementById('root');
 
-const rootElement = document.getElementById("root");
-
+// App Wrapper
 const renderApp = Component => {
   render(
     <AppContainer>
@@ -19,10 +20,12 @@ const renderApp = Component => {
   );
 };
 
+// Rendering app
 renderApp(App);
 
+// HMR
 if (module.hot) {
-  module.hot.accept("./App", () => {
-    renderApp(require("./App").default);
+  module.hot.accept('./App', () => {
+    renderApp(require('./App').default);
   });
 }

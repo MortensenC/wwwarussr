@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-
+import { Link } from "react-router-dom";
 class Nav extends Component {
-  state = {
-    menuItems: [
+  render() {
+    const Items = [
       {
         id: 1,
         href: "Custom-software",
@@ -23,9 +23,7 @@ class Nav extends Component {
         href: "Agile",
         title: "Agile & Project management"
       }
-    ]
-  };
-  render() {
+    ];
     return (
       <div className="nav-container">
         <nav>
@@ -54,9 +52,9 @@ class Nav extends Component {
                   <div className="nav-module logo-module left" />
                   <div className="nav-module menu-module left">
                     <ul className="menu">
-                      {this.state.menuItems.map(menuItem => (
+                      {Items.map(menuItem => (
                         <li key={menuItem.id}>
-                          <a href={menuItem.href}>{menuItem.title}</a>
+                          <Link to={menuItem.href}>{menuItem.title}</Link>
                         </li>
                       ))}
                     </ul>

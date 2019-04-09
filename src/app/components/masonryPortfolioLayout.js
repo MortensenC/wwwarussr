@@ -1,18 +1,20 @@
 import React, { Component } from "react";
 
 class MasonryPortfolioLayout extends Component {
-  state = {
-    items: this.props.items
-  };
   render() {
+    const masonryClasses =
+      "col-md-" +
+      Math.round(12 / this.props.items.length) +
+      " col-sm-6 masonry__item";
+
     return (
       <section className="wide-grid">
         <div className="masonry">
           <div className="masonry__container masonry--animate masonry--active">
-            {this.state.items.map(item => (
+            {this.props.items.map(item => (
               <div
                 key={item.id}
-                className={this.getMasonryClasses()}
+                className={masonryClasses}
                 data-masonry-filter="branding"
               >
                 <a href={item.href}>
@@ -25,12 +27,6 @@ class MasonryPortfolioLayout extends Component {
           </div>
         </div>
       </section>
-    );
-  }
-
-  getMasonryClasses() {
-    return (
-      "col-md-" + Math.round(12/this.state.items.length) + " col-sm-6 masonry__item"
     );
   }
 }

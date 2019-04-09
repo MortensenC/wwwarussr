@@ -1,25 +1,31 @@
-import React from "react";
-import { renderToString } from "react-dom/server";
+// Dependencies
+import React from 'react';
+import { renderToString } from 'react-dom/server';
 
-import App from "../app/App";
+// Containers
+import App from '../app/App';
 
-import html from "./html";
+// HTML
+import html from './html';
 
 export default function serverRender() {
   return (req, res, next) => {
     const context = {};
+
     const markup = renderToString(
-      <App server location={req.url} context={context} />
+      <App
+        server
+        location={req.url}
+        context={context}
+      />
     );
 
     if (context.url) {
       res.redirect(301, context.url);
     } else {
-      res.send(
-        html({
-          markup
-        })
-      );
+      res.send(html({
+        markup
+      }));
     }
   };
 }

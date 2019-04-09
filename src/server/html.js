@@ -1,18 +1,13 @@
 export default function html(options) {
-  const {
-    app = "main",
-    title = "SaaS Product Development Services | Blockchain, IoT, and Machine Learning",
-    description = "arus is a product development firm with expertise in blockchain, IoT, and machine learning. Our senior teams have been building scalable, production-ready applications for the last 10 years, launching more than 250 products. Visit our website to learn more.",
-    stylesheet = "",
-    markup
-  } = options;
+  const { app = "main", title = "arus", markup } = options;
 
-  return `<!doctype html>
+  return `
+    <!doctype html>
             <html lang = "en" >
                 <head>
                     <meta charset="utf-8">
                     <title>${title}</title>
-                    <meta name="description" content=${description}/>
+                    <meta name="description" content=""/>
                     <meta name="author" content="arus"/>
                     <meta property="og:image" content="https://s3.amazonaws.com/ahoyimaagesbvi/img/hero28.jpg"/>
                     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -45,14 +40,16 @@ export default function html(options) {
                         ga('send', 'pageview');
                     </script>
                 </head>
-                <body className="theme--boxed scroll-assist" data-reveal-selectors="section:not(.masonry):not(:first-of-type):not(.parallax)">
+                <body class="theme--boxed scroll-assist " data-reveal-selectors="section:not(.masonry):not(:first-of-type):not(.parallax)">
                     <div id="root">${markup}</div>
-                    <script src="/app/${app}.bundle.js</script>
+                    <script src="/app/vendor.bundle.js"></script>
+                    <script src="/app/${app}.bundle.js"</script>
                     <script src="js/jquery-2.1.4.min.js"></script>
                     <script src="js/isotope.min.js"></script>
                     <script src="js/scrollreveal.min.js"></script>
                     <script src="js/parallax.js"></script>
                     <script src="js/scripts.js"></script>
                 </body>
-                </html>`;
+                </html>
+  `;
 }
