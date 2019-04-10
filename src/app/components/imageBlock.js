@@ -2,10 +2,10 @@ import React, { Component } from "react";
 
 class ImageBlock extends Component {
   render() {
-    //const { imgSrc, title, description, icon, imagePosition } = this.props.item;
-    const iconClasses = "icon icon--lg " + this.props.item.icon;
+    const iconClasses = "icon icon--lg ${this.props.item.icon}";
 
     const imageBlockClasses =
+      // eslint-disable-next-line prefer-template
       "imageblock__content col-md-6 col-sm-4 pos-" +
       this.props.item.imagePosition;
 
@@ -20,6 +20,7 @@ class ImageBlock extends Component {
           <div
             className="background-image-holder"
             style={{
+              // eslint-disable-next-line prefer-template
               backgroundImage: "url(" + this.props.item.imgSrc + ")",
               opacity: 1
             }}

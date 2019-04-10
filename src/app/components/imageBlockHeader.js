@@ -12,6 +12,7 @@ class ImageBlockHeader extends Component {
     };
 
     const imageBlockClasses =
+      // eslint-disable-next-line prefer-template
       "imageblock__content col-md-6 col-sm-4 pos-" + data.imagePosition;
 
     return (
@@ -20,6 +21,7 @@ class ImageBlockHeader extends Component {
           <div
             className="background-image-holder"
             style={{
+              // eslint-disable-next-line prefer-template
               backgroundImage: "url(" + data.imgSrc + ")",
               opacity: 1
             }}

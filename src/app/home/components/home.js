@@ -1,10 +1,10 @@
-// Dependencies
 import React, { Component } from "react";
-import Footer from "./../../components/footer";
-import Nav from "./../../components/nav";
-import ImageBlockHeader from "./../../components/imageBlockHeader";
-import MasonryLayout from "./../../components/masonryLayout";
-import ImageBlock from "./../../components/imageBlock";
+import { Helmet } from "react-helmet";
+import Footer from "../../components/footer";
+import Nav from "../../components/nav";
+import ImageBlockHeader from "../../components/imageBlockHeader";
+import MasonryLayout from "../../components/masonryLayout";
+import ImageBlock from "../../components/imageBlock";
 class Home extends Component {
   render() {
     const data = {
@@ -33,7 +33,7 @@ class Home extends Component {
           id: 3,
           imgSrc:
             "https://images.unsplash.com/photo-1518515097038-ca19a3777cd7?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=4a6e6a1e9b4df15e53b7951af1371e84&amp;auto=format&amp;fit=crop&amp;w=2102&amp;q=80",
-          title: "Blockchain &amp; ÐApps",
+          title: "Blockchain Apps",
           description:
             "We are an experienced block chain development company combined with a deep understanding of AI, IoT, and cloud services.We build distributed ledger applications faster and risk- free.",
           icon: "icon-Cube-Molecule",
@@ -64,6 +64,103 @@ class Home extends Component {
 
     return (
       <React.Fragment>
+        <Helmet>
+          <meta charset="utf-8" />
+          <title>
+            SaaS Product Development Services | Blockchain, IoT, and Machine
+            Learning
+          </title>
+          <meta
+            name="description"
+            content="arus is a product development firm with expertise in blockchain, IoT, and machine learning. Our senior teams have been building scalable, production-ready applications for the last 10 years, launching more than 250 products. Visit our website to learn more."
+          />
+          <meta
+            name="keywords"
+            content="devops,blockchain,agile,IoT,machine learning,saas"
+          />
+          <meta name="author" content="arus" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
+          <meta property="og:title" content="ARUS" />
+          <meta property="og:type" content="website" />
+          <meta
+            property="og:image"
+            content="https://s3.amazonaws.com/ahoyimaagesbvi/img/hero28.jpg"
+          />
+          <meta property="og:url" content="http://arus.io/" />
+          <meta
+            property="og:description"
+            content="SaaS Product Development Services | Blockchain, IoT, and Machine Learning"
+          />
+          <meta property="og:site_name" content="ARUS" />
+          <link
+            href="css/socicon.css"
+            rel="stylesheet"
+            type="text/css"
+            media="all"
+          />
+          <link
+            href="css/iconsmind.css"
+            rel="stylesheet"
+            type="text/css"
+            media="all"
+          />
+          <link
+            href="css/bootstrap.css"
+            rel="stylesheet"
+            type="text/css"
+            media="all"
+          />
+          <link
+            href="css/interface-icons.css"
+            rel="stylesheet"
+            type="text/css"
+            media="all"
+          />
+          <link
+            href="css/owl.carousel.css"
+            rel="stylesheet"
+            type="text/css"
+            media="all"
+          />
+          <link
+            href="css/theme-mediumblue.css"
+            rel="stylesheet"
+            type="text/css"
+            media="all"
+          />
+          <link
+            href="css/custom.css"
+            rel="stylesheet"
+            type="text/css"
+            media="all"
+          />
+          <link
+            href="https://fonts.googleapis.com/css?family=Lora:400,400italic,700|Montserrat:400,700"
+            rel="stylesheet"
+            type="text/css"
+          />
+          <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic%7CKarla:400,700"
+            rel="stylesheet"
+            type="text/css"
+          />
+          <link
+            href="https://fonts.googleapis.com/css?family=Anton"
+            rel="stylesheet"
+          />
+          <link
+            href="https://fonts.googleapis.com/css?family=Raleway"
+            rel="stylesheet"
+          />
+          <link
+            href="css/font-karlaopensans.css"
+            rel="stylesheet"
+            type="text/css"
+          />
+        </Helmet>
         <Nav />
         <div className="main-container">
           <ImageBlockHeader />
@@ -76,12 +173,6 @@ class Home extends Component {
             className="imagebg section--even stats-1 parallax"
             data-overlay="0"
           >
-            {/* <div className="background-image-holder">
-              <img
-                alt=""
-                src="https://aigang.network/img/section-bg-medium-dark.png"
-              />
-            </div> */}
             <div className="row wide-grid">
               <div className="col-sm-3 col-xs-6">
                 <div className="feature feature-1 text-center">

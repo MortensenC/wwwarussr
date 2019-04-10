@@ -3,8 +3,9 @@ import React, { Component } from "react";
 class MasonryPortfolioLayout extends Component {
   render() {
     const masonryClasses =
+      // eslint-disable-next-line prefer-template
       "col-md-" +
-      Math.round(12 / this.props.items.length) +
+      Math.round(12 / this.props.items.length).toString() +
       " col-sm-6 masonry__item";
 
     return (

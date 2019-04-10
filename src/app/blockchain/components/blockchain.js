@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Helmet } from "react-helmet";
 import Nav from "./../../components/nav";
 import Footer from "./../../components/footer";
 import MasonryPortfolioLayout from "./../../components/masonryPortfolioLayout";
@@ -98,6 +99,91 @@ class Blockchain extends Component {
     };
     return (
       <React.Fragment>
+        <Helmet>
+          <meta charset="utf-8" />
+          <title>
+            SaaS Product Development Services | Blockchain, IoT, and Machine
+            Learning
+          </title>
+          <meta
+            name="description"
+            content="arus is a product development firm with expertise in blockchain, IoT, and machine learning. Our senior teams have been building scalable, production-ready applications for the last 10 years, launching more than 250 products. Visit our website to learn more."
+          />
+          <meta
+            name="keywords"
+            content="devops,blockchain,agile,IoT,machine learning,saas"
+          />
+          <meta name="author" content="arus" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
+          <link
+            href="css/socicon.css"
+            rel="stylesheet"
+            type="text/css"
+            media="all"
+          />
+          <link
+            href="css/iconsmind.css"
+            rel="stylesheet"
+            type="text/css"
+            media="all"
+          />
+          <link
+            href="css/bootstrap.css"
+            rel="stylesheet"
+            type="text/css"
+            media="all"
+          />
+          <link
+            href="css/interface-icons.css"
+            rel="stylesheet"
+            type="text/css"
+            media="all"
+          />
+          <link
+            href="css/owl.carousel.css"
+            rel="stylesheet"
+            type="text/css"
+            media="all"
+          />
+          <link
+            href="css/theme-mediumblue.css"
+            rel="stylesheet"
+            type="text/css"
+            media="all"
+          />
+          <link
+            href="css/custom.css"
+            rel="stylesheet"
+            type="text/css"
+            media="all"
+          />
+          <link
+            href="https://fonts.googleapis.com/css?family=Lora:400,400italic,700|Montserrat:400,700"
+            rel="stylesheet"
+            type="text/css"
+          />
+          <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic%7CKarla:400,700"
+            rel="stylesheet"
+            type="text/css"
+          />
+          <link
+            href="https://fonts.googleapis.com/css?family=Anton"
+            rel="stylesheet"
+          />
+          <link
+            href="https://fonts.googleapis.com/css?family=Raleway"
+            rel="stylesheet"
+          />
+          <link
+            href="css/font-karlaopensans.css"
+            rel="stylesheet"
+            type="text/css"
+          />
+        </Helmet>
         <Nav />
         <div className="main-container">
           <Features item={data.featureItem} />

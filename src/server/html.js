@@ -1,28 +1,12 @@
 export default function html(options) {
-  const { app = "main", title = "arus", markup } = options;
+  const { app = "main", markup, helmet } = options;
 
   return `
     <!doctype html>
             <html lang = "en" >
                 <head>
-                    <meta charset="utf-8">
-                    <title>${title}</title>
-                    <meta name="description" content=""/>
-                    <meta name="author" content="arus"/>
-                    <meta property="og:image" content="https://s3.amazonaws.com/ahoyimaagesbvi/img/hero28.jpg"/>
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-                    <link href="css/socicon.css" rel="stylesheet" type="text/css" media="all"/>
-                    <link href="css/iconsmind.css" rel="stylesheet" type="text/css" media="all" />
-                    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-                    <link href="css/interface-icons.css" rel="stylesheet" type="text/css" media="all" />
-                    <link href="css/owl.carousel.css" rel="stylesheet" type="text/css" media="all" />
-                    <link href="css/theme-mediumblue.css" rel="stylesheet" type="text/css" media="all" />
-                    <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
-                    <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700|Montserrat:400,700' rel='stylesheet' type='text/css'/>
-                    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic%7CKarla:400,700" rel="stylesheet" type="text/css"/>
-                    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet"/>
-                    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"/>
-                    <link href="css/font-karlaopensans.css" rel="stylesheet" type="text/css"/>
+                    ${helmet.title.toString()}
+                    ${helmet.meta.toString()}
                     <script>
                         (function(i, s, o, g, r, a, m) {
                             i['GoogleAnalyticsObject'] = r;
@@ -42,7 +26,6 @@ export default function html(options) {
                 </head>
                 <body class="theme--boxed scroll-assist " data-reveal-selectors="section:not(.masonry):not(:first-of-type):not(.parallax)">
                     <div id="root">${markup}</div>
-                    <script src="/app/vendor.bundle.js"></script>
                     <script src="/app/${app}.bundle.js"</script>
                     <script src="js/jquery-2.1.4.min.js"></script>
                     <script src="js/isotope.min.js"></script>

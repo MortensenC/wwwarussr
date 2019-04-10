@@ -1,6 +1,17 @@
 import React, { Component } from "react";
 
 class ImageBlockFeatures extends Component {
+  getIconClasses(icon) {
+    return "icon ${icon}";
+  }
+
+  getImageBlockClasses() {
+    return (
+      // eslint-disable-next-line prefer-template
+      "imageblock__content col-md-5 col-sm-3 pos-left" +
+      this.props.item.imagePosition
+    );
+  }
   render() {
     return (
       <section className="bg--secondary imageblock features features-1">
@@ -8,6 +19,7 @@ class ImageBlockFeatures extends Component {
           <div
             className="background-image-holder"
             style={{
+              // eslint-disable-next-line prefer-template
               backgroundImage: "url(" + this.props.item.imgSrc + ")",
               opacity: 1
             }}
@@ -34,17 +46,6 @@ class ImageBlockFeatures extends Component {
           </div>
         </div>
       </section>
-    );
-  }
-
-  getIconClasses(icon) {
-    return "icon " + icon;
-  }
-
-  getImageBlockClasses() {
-    return (
-      "imageblock__content col-md-5 col-sm-3 pos-left" +
-      this.props.item.imagePosition
     );
   }
 }

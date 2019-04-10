@@ -1,18 +1,18 @@
 // Dependencies
-import 'babel-polyfill';
-import React from 'react';
-import { render } from 'react-dom';
-import { AppContainer } from 'react-hot-loader';
+import "babel-polyfill";
+import React from "react";
+import { hydrate } from "react-dom";
+import { AppContainer } from "react-hot-loader";
 
 // Containers
-import App from './App';
+import App from "./App";
 
 // DOM
-const rootElement = document.getElementById('root');
+const rootElement = document.getElementById("root");
 
 // App Wrapper
 const renderApp = Component => {
-  render(
+  hydrate(
     <AppContainer>
       <Component />
     </AppContainer>,
@@ -25,7 +25,7 @@ renderApp(App);
 
 // HMR
 if (module.hot) {
-  module.hot.accept('./App', () => {
-    renderApp(require('./App').default);
+  module.hot.accept("./App", () => {
+    renderApp(require("./App").default);
   });
 }

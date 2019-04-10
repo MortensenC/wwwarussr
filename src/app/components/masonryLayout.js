@@ -26,13 +26,19 @@ class MasonryLayout extends Component {
       }
     ];
 
+    const masonryClasses =
+      // eslint-disable-next-line prefer-template
+      "col-md-" +
+      Math.round(12 / data.length).toString() +
+      " col-sm-6 masonry__item";
+
     return (
       <section className="wide-grid masonry">
         <div className="masonry__container masonry--animate masonry--active">
-          {datac.map(item => (
+          {data.map(item => (
             <div
               key={item.id}
-              className={this.getMasonryClasses(data)}
+              className={masonryClasses}
               data-masonry-filter="digital"
             >
               <a href={item.href}>
@@ -50,10 +56,6 @@ class MasonryLayout extends Component {
         </div>
       </section>
     );
-  }
-
-  getMasonryClasses(data) {
-    return "col-md-" + Math.round(12 / data.length) + " col-sm-6 masonry__item";
   }
 }
 
