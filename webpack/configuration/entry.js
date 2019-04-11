@@ -1,9 +1,9 @@
 // Environment
-const isDevelopment = process.env.NODE_ENV !== 'production';
+const isDevelopment = process.env.NODE_ENV !== "production";
 
 export default type => {
-  if (type === 'server') {
-    return './serverRender.js';
+  if (type === "server") {
+    return "./serverRender.js";
   }
 
   const entry = {
@@ -11,13 +11,10 @@ export default type => {
   };
 
   if (isDevelopment) {
-    entry.main.push(
-      'webpack-hot-middleware/client',
-      'react-hot-loader/patch'
-    );
+    entry.main.push("webpack-hot-middleware/client", "react-hot-loader/patch");
   }
 
-  entry.main.push('./client.js');
+  entry.main.push("./client.js");
 
   return entry;
 };

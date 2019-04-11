@@ -1,0 +1,31 @@
+// we'd have to include all files here, or from components rather than in the html
+//@import "../../public/css/socicon.css";
+//@import "../../public/css/iconsmind.css";
+//@import "../../public/css/interface-icons.css";
+//@import "../../public/css/owl.carousel.css";
+//@import "../../public/css/theme-mediumblue.css";
+//@import "../../public/css/font-karlaopensans.css";
+//@import "../../public/css/bootstrap.css";
+
+/***************************
+Add your custom styles below
+****************************/
+
+html {
+  scroll-behavior: smooth;
+}
+
+.fat {
+  line-height: 0;
+  font-size: 21px;
+  font-family: "Anton", sans-serif;
+}
+
+.thin {
+  font-family: "Raleway", sans-serif;
+}
+
+.nav-bar .logo {
+  max-height: 30px;
+  margin: 0;
+}

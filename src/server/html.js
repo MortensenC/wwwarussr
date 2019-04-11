@@ -5,6 +5,18 @@ export default function html(options) {
     <!doctype html>
             <html lang = "en" >
                 <head>
+                    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+                    <link href="css/socicon.css" rel="stylesheet" type="text/css" media="all"/>
+                    <link href="css/iconsmind.css" rel="stylesheet" type="text/css" media="all" />
+                    <link href="css/interface-icons.css" rel="stylesheet" type="text/css" media="all" />
+                    <link href="css/owl.carousel.css" rel="stylesheet" type="text/css" media="all" />
+                    <link href="css/theme-mediumblue.css" rel="stylesheet" type="text/css" media="all" />
+                    <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700|Montserrat:400,700' rel='stylesheet' type='text/css'/>
+                    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic%7CKarla:400,700" rel="stylesheet" type="text/css"/>
+                    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet"/>
+                    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"/>
+                    <link href="css/font-karlaopensans.css" rel="stylesheet" type="text/css"/>
+                    
                     ${helmet.title.toString()}
                     ${helmet.meta.toString()}
                     <script>
@@ -25,13 +37,11 @@ export default function html(options) {
                     </script>
                 </head>
                 <body class="theme--boxed scroll-assist " data-reveal-selectors="section:not(.masonry):not(:first-of-type):not(.parallax)">
+                    
                     <div id="root">${markup}</div>
-                    <script src="/app/${app}.bundle.js"</script>
-                    <script src="js/jquery-2.1.4.min.js"></script>
-                    <script src="js/isotope.min.js"></script>
-                    <script src="js/scrollreveal.min.js"></script>
-                    <script src="js/parallax.js"></script>
-                    <script src="js/scripts.js"></script>
+                    <script src="/app/vendor.bundle.js"></script>
+                    <script src="/app/${app}.bundle.js"></script>
+                    
                 </body>
                 </html>
   `;

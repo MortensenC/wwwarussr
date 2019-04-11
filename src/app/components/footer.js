@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class Footer extends Component {
   render() {
@@ -16,21 +17,21 @@ class Footer extends Component {
               <h6>Navigate</h6>
               <ul className="footer__navigation">
                 <li>
-                  <a href="Custom-software">Custom software</a>
+                  <Link to="/custom-software">Custom software</Link>
                 </li>
                 <li>
-                  <a href="Devops">Devops & Infrastructure management</a>
+                  <Link to="/devops">Devops & Infrastructure management</Link>
                 </li>
                 <li>
-                  <a href="Blockchain">Blockchain</a>
+                  <Link to="/blockchain">Blockchain</Link>
                 </li>
               </ul>
               <ul className="footer__navigation">
                 {/* <li>
-                                    <a href="IoT">IoT and Hardware</a>
+                                    <Link to ="IoT">IoT and Hardware</Link>
                                 </li> */}
                 <li>
-                  <a href="Agile">Agile & Project management</a>
+                  <Link to="/agile">Agile & Project management</Link>
                 </li>
               </ul>
             </div>

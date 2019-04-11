@@ -1,26 +1,26 @@
 // Dependencies
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import ExtractTextPlugin from "extract-text-webpack-plugin";
 
 // Environment
-const isDevelopment = process.env.NODE_ENV !== 'production';
+const isDevelopment = process.env.NODE_ENV !== "production";
 
 export default type => {
   const rules = [
     {
       test: /\.js$/,
-      use: 'babel-loader',
+      use: "babel-loader",
       exclude: /node_modules/
     }
   ];
 
-  if (!isDevelopment || type === 'server') {
+  if (!isDevelopment || type === "server") {
     rules.push({
       test: /\.scss$/,
       use: ExtractTextPlugin.extract({
-        fallback: 'style-loader',
+        fallback: "style-loader",
         use: [
-          'css-loader?minimize=true&modules=true&localIdentName=[name]__[local]',
-          'sass-loader'
+          "css-loader?minimize=true&modules=true&localIdentName=[name]__[local]",
+          { loader: "sass-loader", options: { includePaths: ["node_modules"] } }
         ]
       })
     });
@@ -28,9 +28,9 @@ export default type => {
     rules.push({
       test: /\.scss$/,
       use: [
-        'style-loader',
-        'css-loader?minimize=true&modules=true&localIdentName=[name]__[local]',
-        'sass-loader'
+        "style-loader",
+        "css-loader?minimize=true&modules=true&localIdentName=[name]__[local]",
+        { loader: "sass-loader", options: { includePaths: ["node_modules"] } }
       ]
     });
   }

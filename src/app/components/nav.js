@@ -5,22 +5,22 @@ class Nav extends Component {
     const Items = [
       {
         id: 1,
-        href: "Custom-software",
+        href: "/custom-software",
         title: "Custom software"
       },
       {
         id: 2,
-        href: "Devops",
+        href: "/devops",
         title: "Devops & Infrastructure management"
       },
       {
         id: 3,
-        href: "Blockchain",
+        href: "/blockchain",
         title: "Blockchain"
       },
       {
         id: 4,
-        href: "Agile",
+        href: "/agile",
         title: "Agile & Project management"
       }
     ];
@@ -31,13 +31,13 @@ class Nav extends Component {
             <div className="row">
               <div className="nav-stack__upper">
                 <div className="col-xs-6">
-                  <a href="/">
+                  <Link to="/">
                     <img
                       alt=""
                       className="logo"
                       src="https://s3-us-west-2.amazonaws.com/slack-files2/avatars/2017-01-24/132528860086_7413e7ba0b8e242661ff_132.png"
                     />
-                  </a>
+                  </Link>
                 </div>
                 <div className="col-xs-6 text-right">
                   <a href="#top" className="btn btn--sm btn--square">
