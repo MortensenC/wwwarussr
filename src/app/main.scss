@@ -29,3 +29,25 @@ html {
   max-height: 30px;
   margin: 0;
 }
+
+img {
+  margin-bottom: 0em;
+}
+
+div.portfolio-item {
+  margin-bottom: 0em;
+}
+div.portfolio-item h5 {
+  margin: 0;
+}
+div.portfolio-item span {
+  opacity: 0.5;
+}
+div.portfolio-item img {
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+}
+div.portfolio-item:hover img {
+  opacity: 0.7;
+}

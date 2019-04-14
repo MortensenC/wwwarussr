@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import Fade from "react-reveal/Fade";
 class ImageBlockHeader extends Component {
   render() {
     const data = {
@@ -17,18 +17,20 @@ class ImageBlockHeader extends Component {
 
     return (
       <section className="imageblock about-2 bg--dark">
-        <div className={imageBlockClasses}>
-          <div
-            className="background-image-holder"
-            style={{
-              // eslint-disable-next-line prefer-template
-              backgroundImage: "url(" + data.imgSrc + ")",
-              opacity: 1
-            }}
-          >
-            <img alt="" src={data.imgSrc} />
+        <Fade>
+          <div className={imageBlockClasses}>
+            <div
+              className="background-image-holder"
+              style={{
+                // eslint-disable-next-line prefer-template
+                backgroundImage: "url(" + data.imgSrc + ")",
+                opacity: 1
+              }}
+            >
+              <img alt="" src={data.imgSrc} />
+            </div>
           </div>
-        </div>
+        </Fade>
         <div className="container">
           <div className="row">
             <div className="col-md-5 col-md-push-7 col-sm-8 col-sm-push-4">

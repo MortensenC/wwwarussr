@@ -9,9 +9,14 @@ import {
   withRouter
 } from "react-router-dom";
 
+import Footer from "./components/footer";
+import Nav from "./components/nav";
+import config from "react-reveal/globals";
+
 // Routes
 import routes from "../shared/routes";
 
+config({ ssrFadeout: true });
 require("./main.scss");
 
 class MainApp extends React.Component {
@@ -55,26 +60,10 @@ class MainApp extends React.Component {
             content="SaaS Product Development Services | Blockchain, IoT, and Machine Learning"
           />
           <meta property="og:site_name" content="ARUS" />
-          <link
-            href="https://fonts.googleapis.com/css?family=Lora:400,400italic,700|Montserrat:400,700"
-            rel="stylesheet"
-            type="text/css"
-          />
-          <link
-            href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic%7CKarla:400,700"
-            rel="stylesheet"
-            type="text/css"
-          />
-          <link
-            href="https://fonts.googleapis.com/css?family=Anton"
-            rel="stylesheet"
-          />
-          <link
-            href="https://fonts.googleapis.com/css?family=Raleway"
-            rel="stylesheet"
-          />
         </Helmet>
+        <Nav />
         {this.props.children}
+        <Footer />
       </div>
     );
   }

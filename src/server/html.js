@@ -6,16 +6,16 @@ export default function html(options) {
             <html lang = "en" >
                 <head>
                     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+                    <link href="css/theme-mediumblue.css" rel="stylesheet" type="text/css" media="all"/>
+
                     <link href="css/socicon.css" rel="stylesheet" type="text/css" media="all"/>
                     <link href="css/iconsmind.css" rel="stylesheet" type="text/css" media="all" />
                     <link href="css/interface-icons.css" rel="stylesheet" type="text/css" media="all" />
                     <link href="css/owl.carousel.css" rel="stylesheet" type="text/css" media="all" />
-                    <link href="css/theme-mediumblue.css" rel="stylesheet" type="text/css" media="all" />
                     <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700|Montserrat:400,700' rel='stylesheet' type='text/css'/>
                     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic%7CKarla:400,700" rel="stylesheet" type="text/css"/>
                     <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet"/>
                     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"/>
-                    <link href="css/font-karlaopensans.css" rel="stylesheet" type="text/css"/>
                     
                     ${helmet.title.toString()}
                     ${helmet.meta.toString()}

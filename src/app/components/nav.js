@@ -1,32 +1,39 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";    
+
+const Items = [
+  {
+    id: 1,
+    href: "/custom-software",
+    title: "Custom software"
+  },
+  {
+    id: 2,
+    href: "/devops",
+    title: "Devops & Infrastructure management"
+  },
+  {
+    id: 3,
+    href: "/blockchain",
+    title: "Blockchain"
+  },
+  {
+    id: 4,
+    href: "/agile",
+    title: "Agile & Project management"
+  }
+];
 class Nav extends Component {
+  state = {
+    open: false
+  };
+
   render() {
-    const Items = [
-      {
-        id: 1,
-        href: "/custom-software",
-        title: "Custom software"
-      },
-      {
-        id: 2,
-        href: "/devops",
-        title: "Devops & Infrastructure management"
-      },
-      {
-        id: 3,
-        href: "/blockchain",
-        title: "Blockchain"
-      },
-      {
-        id: 4,
-        href: "/agile",
-        title: "Agile & Project management"
-      }
-    ];
+
+    const { open } = this.state;
     return (
       <div className="nav-container">
-        <nav>
+        <nav className={(open? "nav-open": "")} >
           <div className="container nav-stack">
             <div className="row">
               <div className="nav-stack__upper">
@@ -51,7 +58,7 @@ class Nav extends Component {
                 <div className="nav-bar">
                   <div className="nav-module logo-module left" />
                   <div className="nav-module menu-module left">
-                    <ul className="menu">
+                    <ul className={`menu ${(open? "": "")}`} >
                       {Items.map(menuItem => (
                         <li key={menuItem.id}>
                           <Link to={menuItem.href}>{menuItem.title}</Link>
@@ -60,7 +67,7 @@ class Nav extends Component {
                     </ul>
                   </div>
                 </div>
-                <div className="nav-mobile-toggle visible-sm visible-xs">
+                <div className="nav-mobile-toggle visible-sm visible-xs" onClick={()=>this.setState({open: !open})}>
                   <i className="icon-Align-Right icon icon--sm" />
                 </div>
               </div>

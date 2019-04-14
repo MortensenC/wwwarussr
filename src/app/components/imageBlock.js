@@ -2,7 +2,8 @@ import React, { Component } from "react";
 
 class ImageBlock extends Component {
   render() {
-    const iconClasses = "icon icon--lg ${this.props.item.icon}";
+    // eslint-disable-next-line prefer-template
+    const iconClasses = "icon icon--lg " + this.props.item.icon;
 
     const imageBlockClasses =
       // eslint-disable-next-line prefer-template
