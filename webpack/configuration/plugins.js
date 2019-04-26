@@ -43,12 +43,12 @@ export default type => {
   } else {
     plugins.push(
       new webpack.DefinePlugin({
-        "process.env": {
-          NODE_ENV: JSON.stringify("production")
-        }
+        "process.env.NODE_ENV": JSON.stringify("production")
       }),
       new webpack.optimize.AggressiveMergingPlugin(),
-      new webpack.optimize.UglifyJsPlugin(),
+      new webpack.optimize.UglifyJsPlugin({
+        inline: false
+      }),
       new CompressionPlugin({
         asset: "[path].gz[query]",
         algorithm: "gzip",

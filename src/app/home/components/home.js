@@ -20,7 +20,7 @@ const data = {
     {
       id: 2,
       imgSrc:
-        "https://images.unsplash.com/photo-1532339848923-c4beffa7abcb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=80892fa505d37b10b5b30d23d031ab8c&auto=format&fit=crop&w=1350&q=80",
+        "https://images.unsplash.com/photo-1532339848923-c4beffa7abcb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=80892fa505d37b10b5b30d23d031ab8c&auto=format&fit=crop&w=768&q=60",
       title: "Devops and CI/CD",
       description:
         "Building Code delivery pipelines to ship faster more reliable products at the speed of light.Infrastructure both cloud and distributed can be tough, we write robots to mitigate human error for your data integrity uptime and piece of mind.",
@@ -30,7 +30,7 @@ const data = {
     {
       id: 3,
       imgSrc:
-        "https://images.unsplash.com/photo-1518515097038-ca19a3777cd7?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=4a6e6a1e9b4df15e53b7951af1371e84&amp;auto=format&amp;fit=crop&amp;w=2102&amp;q=80",
+        "https://images.unsplash.com/photo-1518515097038-ca19a3777cd7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4a6e6a1e9b4df15e53b7951af1371e84&auto=format&fit=crop&w=768&q=60",
       title: "Blockchain Apps",
       description:
         "We are an experienced block chain development company combined with a deep understanding of AI, IoT, and cloud services.We build distributed ledger applications faster and risk- free.",
@@ -40,7 +40,7 @@ const data = {
     {
       id: 4,
       imgSrc:
-        "https://images.unsplash.com/photo-1510746001195-0db09655b6db?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1d3c566059bcd5eedb4191f6364bb59b&auto=format&fit=crop&w=2389&q=80",
+        "https://images.unsplash.com/photo-1510746001195-0db09655b6db?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1d3c566059bcd5eedb4191f6364bb59b&auto=format&fit=crop&w=768&q=60",
       title: "IoT and Hardware",
       description:
         "We help innovative tech start-ups to one-up the competition with smart products in wearables, healthcare, connected home and industrial automation fields, and aid businesses with their goals to cut down on expenses and increase their efficiency with actionable data from distributed connected sensors, objects and devices.",
@@ -50,7 +50,7 @@ const data = {
     {
       id: 5,
       imgSrc:
-        "https://images.unsplash.com/photo-1493689485253-f07fcbfc731b?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=ebe5bb8654d3816c9d934ff455abffb2&amp;auto=format&amp;fit=crop&amp;w=2066&amp;q=80",
+        "https://images.unsplash.com/photo-1493689485253-f07fcbfc731b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ebe5bb8654d3816c9d934ff455abffb2&auto=format&fit=crop&w=768&q=60",
       title: "Agile & Scrum PM's",
       description:
         "Our solutions bridge the gap between process and technology, and focus on the teams who carry them out.Focusing on unifying teams and processes, we deliver an integrated approach that supports the software goals of any organization. We call this Software Services Lifecycle Management(SSLM).",
@@ -88,7 +88,7 @@ class Home extends Component {
             ))}
           </Fade>
           <section
-            className="imagebg section--even stats-1 parallax"
+            className="imagebg section--even stats-1 parallax bg--dark"
             data-overlay="0"
           >
             <div className="row wide-grid">

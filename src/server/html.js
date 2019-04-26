@@ -11,7 +11,6 @@ export default function html(options) {
                     <link href="css/socicon.css" rel="stylesheet" type="text/css" media="all"/>
                     <link href="css/iconsmind.css" rel="stylesheet" type="text/css" media="all" />
                     <link href="css/interface-icons.css" rel="stylesheet" type="text/css" media="all" />
-                    <link href="css/owl.carousel.css" rel="stylesheet" type="text/css" media="all" />
                     <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700|Montserrat:400,700' rel='stylesheet' type='text/css'/>
                     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic%7CKarla:400,700" rel="stylesheet" type="text/css"/>
                     <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet"/>
@@ -36,7 +35,7 @@ export default function html(options) {
                         ga('send', 'pageview');
                     </script>
                 </head>
-                <body class="theme--boxed scroll-assist " data-reveal-selectors="section:not(.masonry):not(:first-of-type):not(.parallax)">
+                <body class="theme--boxed">
                     
                     <div id="root">${markup}</div>
                     <script src="/app/vendor.bundle.js"></script>

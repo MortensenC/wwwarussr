@@ -1,10 +1,11 @@
 import express from "express";
 import sendgrid from "@sendgrid/mail";
 
+sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
+
 const router = express.Router();
 
-router.get("contactus", function(req, res) {
-  sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
+router.post("/contactus", async (req, res) => {
   const msg = {
     to: "patrick.ortell@arus.io",
     from: "test@example.com",
@@ -21,7 +22,16 @@ router.get("contactus", function(req, res) {
       req.body.message +
       "</p>"
   };
-  sendgrid.send(msg);
+  try {
+    await sendgrid.send(msg);
+    res.status(201).send();
+  } catch (e) {
+    res.status(400).json({ error: e.message });
+  }
+});
+
+router.all("*", (req, res) => {
+  res.status(404).send(); 
 });
 
 export default router;

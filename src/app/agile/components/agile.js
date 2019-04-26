@@ -27,7 +27,7 @@ const data = {
   ],
   imageBlockFeatureItem: {
     imgSrc:
-      "https://images.unsplash.com/photo-1525332193053-dee9e7348624?ixlib=rb-0.3.5&amp;s=b2be64a7b17d323febd58bdfa710f9ad&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80",
+      "https://images.unsplash.com/photo-1525332193053-dee9e7348624?ixlib=rb-0.3.5&s=b2be64a7b17d323febd58bdfa710f9ad&auto=format&fit=crop&w=1024&q=60",
     title: "Your Partner for Agile Success",
     description:
       "At every phase of your agile journey we guide your teams with a proven methodology for success.",

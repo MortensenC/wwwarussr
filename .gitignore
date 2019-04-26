@@ -3,3 +3,5 @@ dist/*
 public/app/*
 .vscode/launch.json
 sendgrid.env
+
+ .DS_Store
