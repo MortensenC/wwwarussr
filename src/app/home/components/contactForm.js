@@ -80,7 +80,6 @@ class ContactForm extends Component {
                       required
                       onChange={e => this.setState({ email: e.target.value })}
                       value={this.state.email}
-                      required=""
                     />
                   </div>
                   <div className="input-with-icon">
@@ -101,8 +100,7 @@ class ContactForm extends Component {
                   </button>
                 </form>
                 <span className="type--fine-print">
-                  View our
-                  <a href="#top">privacy policy</a>
+                  View our <a href="#top">privacy policy</a>
                 </span>
               </div>
             </div>

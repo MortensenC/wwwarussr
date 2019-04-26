@@ -1,0 +1,21 @@
+branch-defaults:
+  default:
+    environment: Arus-dev-env
+  master:
+    environment: Arus-dev-env
+    group_suffix: null
+global:
+  application_name: arus
+  branch: null
+  default_ec2_keyname: SlickAWS
+  default_platform: arn:aws:elasticbeanstalk:us-west-2::platform/Node.js running on
+    64bit Amazon Linux/4.8.1
+  default_region: us-west-2
+  include_git_submodules: true
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: eb-cli
+  repository: null
+  sc: null
+  workspace_type: Application

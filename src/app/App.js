@@ -17,7 +17,7 @@ import config from "react-reveal/globals";
 import routes from "../shared/routes";
 
 config({ ssrFadeout: true });
-require("./main.scss");
+require("./App.scss");
 
 class MainApp extends React.Component {
   componentDidUpdate(prevProps) {
