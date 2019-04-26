@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Features from "./../../components/features";
 import ImageBlockFeatures from "./../../components/imageBlockFeatures";
-import Gallery from "../../components/Gallery";
+import Gallery from "../../components/gallery";
 
 const data = {
   featureItem: {

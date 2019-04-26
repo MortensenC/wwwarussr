@@ -11,10 +11,10 @@ class Gallery extends Component {
       currentImage: 0
     };
 
-    this.closeLightbox = this.closeLightbox.bind(this);
-    this.gotoNext = this.gotoNext.bind(this);
-    this.gotoPrevious = this.gotoPrevious.bind(this);
-    this.gotoImage = this.gotoImage.bind(this);
+    this.handleCloseLightbox = this.handleCloseLightbox.bind(this);
+    this.handleGotoNext = this.handleGotoNext.bind(this);
+    this.handleGotoPrevious = this.handleGotoPrevious.bind(this);
+    this.handleGotoImage = this.handleGotoImage.bind(this);
     this.handleClickImage = this.handleClickImage.bind(this);
     this.openLightbox = this.openLightbox.bind(this);
   }
@@ -66,7 +66,7 @@ class Gallery extends Component {
       Math.round(12 / images.length).toString() +
       " col-sm-6 masonry__item";
 
-    const gallery = images.map((obj, i) => {
+    const _gallery = images.map((obj, i) => {
       return (
         <div key={i} className={masonryClasses} data-masonry-filter="branding">
           <a href={obj.src} onClick={e => this.openLightbox(i, e)}>
@@ -82,7 +82,7 @@ class Gallery extends Component {
       <section className="wide-grid">
         <div className="masonry">
           <div className="masonry__container masonry--animate masonry--active">
-            {gallery}
+            {_gallery}
           </div>
         </div>
       </section>

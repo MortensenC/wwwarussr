@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";    
+import { Link } from "react-router-dom";
 
 const Items = [
   {
@@ -29,11 +29,10 @@ class Nav extends Component {
   };
 
   render() {
-
     const { open } = this.state;
     return (
       <div className="nav-container">
-        <nav className={(open? "nav-open": "")} >
+        <nav className={open ? "nav-open" : ""}>
           <div className="container nav-stack">
             <div className="row">
               <div className="nav-stack__upper">
@@ -58,7 +57,7 @@ class Nav extends Component {
                 <div className="nav-bar">
                   <div className="nav-module logo-module left" />
                   <div className="nav-module menu-module left">
-                    <ul className={`menu ${(open? "": "")}`} >
+                    <ul className={`menu ${open ? "" : ""}`}>
                       {Items.map(menuItem => (
                         <li key={menuItem.id}>
                           <Link to={menuItem.href}>{menuItem.title}</Link>
@@ -67,7 +66,10 @@ class Nav extends Component {
                     </ul>
                   </div>
                 </div>
-                <div className="nav-mobile-toggle visible-sm visible-xs" onClick={()=>this.setState({open: !open})}>
+                <div
+                  className="nav-mobile-toggle visible-sm visible-xs"
+                  onClick={() => this.setState({ open: !open })}
+                >
                   <i className="icon-Align-Right icon icon--sm" />
                 </div>
               </div>

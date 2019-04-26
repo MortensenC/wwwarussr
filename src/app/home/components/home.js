@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import ImageBlockHeader from "../../components/imageBlockHeader";
 import ImageBlock from "../../components/imageBlock";
 import Fade from "react-reveal/Fade";
-import Gallery from "../../components/Gallery";
+import Gallery from "../../components/gallery";
+import ContactForm from "./contactForm";
 
 const data = {
   sectionItems: [
@@ -129,75 +130,7 @@ class Home extends Component {
               </div>
             </div>
           </section>
-          <section className="section--overlap cta cta-8">
-            <div className="container">
-              <div className="row">
-                <div className="col-md-5 col-sm-5 text-center">
-                  <div className="boxed bg--white box-shadow">
-                    <form
-                      action="api/contactus"
-                      method="post"
-                      id="subForm"
-                      data-error="Please fill all fields correctly."
-                      data-success="Thanks for reaching out! We will ge back to you soon!"
-                    >
-                      <div className="input-with-icon">
-                        <label htmlFor="fieldName">Your Name</label>
-                        <i className="icon icon-Male-2" />
-                        <input
-                          className="validate-required"
-                          id="fieldName"
-                          name="name"
-                          type="text"
-                        />
-                      </div>
-                      <div className="input-with-icon">
-                        <label htmlFor="fieldEmail">Email Address</label>
-                        <i className="icon icon-Mail-2" />
-                        <input
-                          className="validate-required validate-email"
-                          id="fieldEmail"
-                          name="email"
-                          type="email"
-                          required=""
-                        />
-                      </div>
-                      <div className="input-with-icon">
-                        <label htmlFor="fieldName">About your needs</label>
-                        <i className="icon icon-Idea" />
-                        <input
-                          className="validate-required"
-                          id="fieldMessage"
-                          name="message"
-                          type="text"
-                        />
-                      </div>
-                      <button type="submit" className="btn btn--primary vpe">
-                        Send
-                      </button>
-                    </form>
-                    <span className="type--fine-print">
-                      View our
-                      <a href="#top">privacy policy</a>
-                    </span>
-                  </div>
-                </div>
-                <div className="col-md-6 col-md-push-1 col-sm-7 col-sm-push-0">
-                  <h3>
-                    You alone can do it, but you can't do it alone.... give us a
-                    shout.
-                  </h3>
-                  <p>
-                    Fill out the form with your contact info and a few sentences
-                    about your idea or specific needs. Within one business day,
-                    we will contact you and set up a time to chat about how we
-                    can help. After our conversation, the arus team will put
-                    together a free customized quote for you.{" "}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
+          <ContactForm />
         </div>
       </React.Fragment>
     );

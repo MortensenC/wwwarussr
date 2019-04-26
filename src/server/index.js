@@ -6,6 +6,10 @@ import webpack from "webpack";
 import webpackDevMiddleware from "webpack-dev-middleware";
 import webpackHotMiddleware from "webpack-hot-middleware";
 import webpackHotServerMiddleware from "webpack-hot-server-middleware";
+import bodyParser from "body-parser";
+import cors from "cors";
+
+import api from "./api";
 
 // Webpack Configuration
 import webpackConfig from "../../webpack.config";
@@ -14,6 +18,13 @@ import webpackConfig from "../../webpack.config";
 const app = express();
 const compiler = webpack(webpackConfig);
 const port = process.env.NODE_PORT || 3000;
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(cors());
+
+app.use("/api", api);
 
 // Public static
 app.use(express.static(path.join(__dirname, "../../public")));
