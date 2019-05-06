@@ -28,7 +28,7 @@ const data = {
   ],
   imageBlockFeatureItem: {
     imgSrc:
-      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=2562d07e189d92150c0b24ee243c5af2&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80",
+      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2562d07e189d92150c0b24ee243c5af2&auto=format&fit=crop&w=1024&q=60",
     title: "Infrastructure as code",
     description:
       "Lets automate your infrastructure and let the bots we build deploy your pipeline needs.",

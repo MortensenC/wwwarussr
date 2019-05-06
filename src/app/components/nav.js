@@ -46,9 +46,11 @@ class Nav extends Component {
                   </Link>
                 </div>
                 <div className="col-xs-6 text-right">
-                  <a href="#top" className="btn btn--sm btn--square">
+                  {/*
+                     @TODO: we'd need a /contact route with the form
+                    <a href="#top" className="btn btn--sm btn--square">
                     <span className="btn__text">Contact Now</span>
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>

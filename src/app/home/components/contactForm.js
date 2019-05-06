@@ -15,7 +15,7 @@ class ContactForm extends Component {
       name: "",
       message: "",
       email: "",
-      buttonText: "Message Sent"
+      buttonText: "Message Sent. Send another?"
     });
   };
 
@@ -35,11 +35,12 @@ class ContactForm extends Component {
     axios
       .post("/api/contactus", data)
       .then(res => {
-        this.setState({ sent: true }, this.resetForm());
+        this.resetForm();
       })
       .catch(() => {
-        // eslint-disable-next-line no-console
-        console.log("Message not sent");
+        this.setState({
+          buttonText: "Couldn't send. Send Again?"
+        });
       });
   };
   render() {
@@ -63,6 +64,7 @@ class ContactForm extends Component {
                       id="fieldName"
                       name="name"
                       type="text"
+                      required
                       onChange={e => this.setState({ name: e.target.value })}
                       value={this.state.name}
                     />
@@ -75,9 +77,9 @@ class ContactForm extends Component {
                       id="fieldEmail"
                       name="email"
                       type="email"
+                      required
                       onChange={e => this.setState({ email: e.target.value })}
                       value={this.state.email}
-                      required=""
                     />
                   </div>
                   <div className="input-with-icon">
@@ -87,18 +89,18 @@ class ContactForm extends Component {
                       className="validate-required"
                       id="fieldMessage"
                       name="message"
+                      required
                       onChange={e => this.setState({ message: e.target.value })}
                       value={this.state.message}
                       type="text"
                     />
                   </div>
                   <button type="submit" className="btn btn--primary vpe">
-                    Send
+                    {this.state.buttonText || "Send" }
                   </button>
                 </form>
                 <span className="type--fine-print">
-                  View our
-                  <a href="#top">privacy policy</a>
+                  View our <a href="#top">privacy policy</a>
                 </span>
               </div>
             </div>
